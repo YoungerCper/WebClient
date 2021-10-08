@@ -1,0 +1,11 @@
+.postsPage{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 40px;
+    width: 100%;
+}
+
+.postL{
+    flex: 1;
+    margin: 32px 0 20px 0;
+}

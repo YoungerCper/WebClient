@@ -1,0 +1,35 @@
+.scroller{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.numberPage{
+    margin: 0 3px;
+    border: 0.2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 1px;
+    padding: 4px;
+}
+
+.numberPageSelected{
+    margin: 0 3px;
+    border: 0.2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 1px;
+    padding: 4px;
+
+    color: #ffffff;
+    background: #9c0303;
+}
+
+.dots{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+
+    color: #000000;
+}

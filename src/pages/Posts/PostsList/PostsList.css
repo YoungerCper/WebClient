@@ -1,0 +1,11 @@
+.postList{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; 
+    align-content: stretch; 
+}
+
+.postBox{
+    margin: 10px;
+     
+}

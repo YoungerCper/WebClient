@@ -1,0 +1,10 @@
+.window{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBox{
+    display: flex;
+    flex: 1;
+}

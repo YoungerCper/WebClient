@@ -1,0 +1,74 @@
+.postCard{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px 25px 14px;
+    background: #C4C4C4;
+    width: 200px;
+    transition: 0.25s;
+
+}
+
+.date{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+
+    color: #000000;
+
+    text-align: right;
+    line-height: 3px;
+    
+}
+
+.title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+
+    color: #000000;
+}
+
+.tags{
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 10px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.mainData{
+    line-height: 3px;
+}
+
+.text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+
+    margin-top: 36px;
+
+    color: #000000;
+
+}
+
+.author{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #000000;
+    text-align: right;
+}
+
+.postCard:hover{
+    outline: 4px solid #000000;
+}
