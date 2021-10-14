@@ -12,8 +12,6 @@ function PostsList(props){
         for(let i = props.pageNumber * 10; i < (props.pageNumber + 1) * 10 && i < props.posts.length; i++){
             newArray.push(props.posts[i]);
         }
-        console.log(props.pageNumber + " " +  props.posts.length);
-        console.log(newArray);
         return newArray;
     }, [props.pageNumber, props.posts])
 
@@ -22,8 +20,6 @@ function PostsList(props){
 
     if(props.posts.length <= 0)
         return(<p>Постов нет</p>);
-
-    //console.log(visPost);
 
     return(
         <div className="postList">

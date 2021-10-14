@@ -3,9 +3,10 @@
     flex-wrap: wrap;
     align-items: stretch; 
     align-content: stretch; 
+    height: 100%;
 }
 
 .postBox{
     margin: 10px;
-     
+    max-height: 50%;
 }

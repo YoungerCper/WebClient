@@ -9,3 +9,73 @@
 
     margin: 216px 103px;
 }
+
+.fail>span{
+    background-color: #FF3D54;
+    color: #FFFFFF;
+}
+
+.post{
+    padding: 8% 10% 56px 8%;
+    width: 100%;
+}
+
+.upper{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    min-width: 240px;
+}
+
+.upper>span{
+    flex: 1;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #000000;
+    text-align: left;
+
+}
+
+.tags{
+    margin: 8px 5px;
+}
+
+.tags>span{
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #000000;
+}
+
+.title{
+    margin: 15px 0;
+    
+}
+
+.title>span{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 37px;
+
+    color: #000000;
+}
+
+.text>p{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 16px;
+
+color: #000000;
+}

@@ -9,7 +9,6 @@ function PostCard(props){
                 + myDate.getHours() + ':' + myDate.getMinutes() + "");
     };
 
-    console.log(props.post._id);
     return(
         <div className="postCard">
             <div className="date">
@@ -21,10 +20,10 @@ function PostCard(props){
                 <p className="tags">{props.post.tags.map(tag => '#' + tag)}</p>
             </div>
             <div className="text">
-                {props.post.text}
+                {props.post.text.substr(0, 100)}
             </div>
             <div className="author">
-                {props.post.author}
+                {props.post.authorName}
             </div>
         </div>
     );

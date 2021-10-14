@@ -12,16 +12,14 @@ function ViewPost(){
 
     const {load, request, error} = useHttp();
 
-    let ret;
-
     const postLoad = useCallback(async() =>{
         try{
-            const data = await request(`/post/${postId}`,'GET',{});
+            const data = await request(`/post/${postId}`, 'GET', null, {});
             setPost(data);
-            alert(1);
+            console.log(data);
         }
         catch(e){
-            
+            console.log("error");
         }
     }, [postId, request]);
 
@@ -31,23 +29,40 @@ function ViewPost(){
 
     const formatingDate = (time) =>{
         const myDate = new Date(time);
-        return (myDate.getDate() + '/' + (myDate.getMonth() + 1) + '/' + myDate.getFullYear() + ' '
-                + myDate.getHours() + ':' + myDate.getMinutes() + "");
+        return (myDate.getDate() + '/' + (myDate.getMonth() + 1) + '/' + myDate.getFullYear());
     };
 
-   
+    const formatingHour = (time) =>{
+        const myDate = new Date(time);
+        return (myDate.getHours() + ':' + myDate.getMinutes() + "");
+    };
+
+    
 
     if(load){
         return(<div></div>)
     }
 
-    if(error){
-        return(<div className="fail">К сожалению такого поста нет :’(</div>)
+    if(error || post == null){
+        return(<div className="fail post">К сожалению такого поста нет <span>:’(</span></div>)
     }
     console.log(post);
     return(
-        <div>
-            <p className="abouAuthor">{post.author} {formatingDate(post.time)}</p>
+        <div className="post">
+            <div className="upper">
+                <span className="abouAuthor">{post.authorName}</span>
+                <span className="date">{formatingHour(post.time)}</span>
+                <span className="hour">{formatingDate(post.time)}</span>
+            </div>
+            <div className="tags">
+                <span>{post.tags.map(tag => '#' + tag + " ")}</span>
+            </div>
+            <div className="title">
+                <span>{post.title}</span>
+            </div>
+            <div className="text">
+                <p>{post.text}</p>
+            </div>
         </div>
     );
 }

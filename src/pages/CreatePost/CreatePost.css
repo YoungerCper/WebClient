@@ -38,9 +38,14 @@ textarea{
     border: none;
     padding: 12px 42px;
 
-
+    transition: 0.25s;
     color: #000000;
 
+}
+
+.createButton:hover{
+    background-color: #FF3D54;
+    color: #ffffff;
 }
 
 .buttonBox{

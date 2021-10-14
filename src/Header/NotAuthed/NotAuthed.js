@@ -9,15 +9,22 @@ function NotAuthed(){
     const [authData, setAuthData] = useState({login: "", password: ""});
 
     const signIn = async () =>{
-        const data = await request('/auth/login', 'POST', {...authData});
-        console.log(data);
-        if(error != null){
-            alert(error.message);
-        }
-        else{
+        try{
+            const data = await request('/auth/login', 'POST', {...authData});
+            console.log(data);
+            if(error != null){
+                alert(error.message);
+                return;
+            }
+            if(data == null){
+                alert("Не правильный логин или пароль");
+                return;
+            }
             console.log(data);
             auth.login(data.token, data.userId, data.name, data.second_name);
+            
         }
+        catch(e){}
     };
 
     const signUp = async () =>{
@@ -25,8 +32,10 @@ function NotAuthed(){
         console.log(data);
         if(error != null){
             alert(error.message);
+            return;
         }
-        else{
+        if(data == null){
+            alert("Что-то пошло не так");
         }
     };
 
